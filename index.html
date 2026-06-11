@@ -69,12 +69,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <!-- Logo & Brand Name -->
             <a href="#beranda" class="flex items-center space-x-3 group">
-                <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-gold/50 shadow-md group-hover:border-gold transition-colors">
+                <div id="logo-container" class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-gold/50 shadow-md group-hover:border-gold transition-colors flex items-center justify-center bg-islamic">
+                    <!-- Menggunakan fallback cerdas untuk logo -->
                     <img 
-                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFtWd-eJh9EJNefCJnMaO0DAkL4v13Law40KwrYowOkg-XOh9Jge5gGstpuKcXUoPx" 
+                        id="main-logo"
+                        src="logo.png" 
                         alt="Logo Gurfatulidad" 
                         class="w-full h-full object-cover"
-                        onerror="this.src='https://placehold.co/100?text=GI'"
                     />
                 </div>
                 <div>
@@ -194,12 +195,14 @@
                         <div class="relative rounded-2xl bg-white p-6 shadow-2xl text-gray-800 border border-gray-100">
                             <!-- Logo Header Inside Card -->
                             <div class="flex items-center space-x-3 pb-4 mb-4 border-b border-gray-100">
-                                <img 
-                                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFtWd-eJh9EJNefCJnMaO0DAkL4v13Law40KwrYowOkg-XOh9Jge5gGstpuKcXUoPx" 
-                                    alt="Gurfatulidad" 
-                                    class="w-12 h-12 rounded-full border border-gold/40 shadow-sm"
-                                    onerror="this.src='https://placehold.co/100?text=GI'"
-                                />
+                                <div id="card-logo-container" class="w-12 h-12 rounded-full border border-gold/40 shadow-sm overflow-hidden flex items-center justify-center bg-islamic">
+                                    <img 
+                                        id="card-logo"
+                                        src="logo.png" 
+                                        alt="Gurfatulidad" 
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
                                 <div>
                                     <h4 class="text-base font-bold text-islamic leading-none">Gurfatulidad</h4>
                                     <p class="text-xs text-gray-400 mt-1">Sertifikasi & Bimbingan Terbaik</p>
@@ -212,12 +215,12 @@
 
                             <!-- Mini Mentor Spotlight inside card -->
                             <div class="bg-islamic-50 rounded-xl p-3 border border-islamic-100/50 flex items-center space-x-3">
-                                <div class="w-10 h-10 rounded-full bg-islamic-200 overflow-hidden border border-gold flex-shrink-0">
+                                <div id="mini-avatar-container" class="w-10 h-10 rounded-full bg-islamic-200 overflow-hidden border border-gold flex-shrink-0 flex items-center justify-center">
                                     <img 
-                                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg75ObNxK8ODlh57BkwtVo2JAn7-p1IbvId2hmHkfEz5MC2-gd2Bo7ARwn0p3sq3Iyd" 
+                                        id="mini-avatar"
+                                        src="ustadz.png" 
                                         alt="Ust Fajar Amirul Mu’ti" 
                                         class="w-full h-full object-cover"
-                                        onerror="this.src='https://placehold.co/100?text=Ust'"
                                     />
                                 </div>
                                 <div class="min-w-0">
@@ -336,14 +339,14 @@
                         <!-- Main Card -->
                         <div class="bg-white rounded-2xl overflow-hidden shadow-2xl border-2 border-gold/40">
                             <!-- Image Frame with Aspect Ratio -->
-                            <div class="relative aspect-[4/5] bg-gray-100">
+                            <div id="large-photo-container" class="relative aspect-[4/5] bg-islamic-dark overflow-hidden flex items-center justify-center">
                                 <img 
-                                    src="https://drive.google.com/file/d/1FUjCzEWGEeNIRcIoVWulUsCGjTyOmBhO/view?usp=drivesdk" 
+                                    id="large-photo"
+                                    src="ustadz.png" 
                                     alt="Ust. Fajar Amirul Mu’ti, S.Ag." 
                                     class="w-full h-full object-cover object-top"
-                                    onerror="this.src='https://placehold.co/400x500?text=Ustadz+Fajar+Amirul+Mu%E2%80%99ti'"
                                 />
-                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-white">
+                                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-6 text-white z-10">
                                     <span class="text-gold font-bold text-xs tracking-wider uppercase">Al-Mukarram</span>
                                     <h4 class="text-xl font-bold mt-1">Ust. Fajar Amirul Mu’ti, S.Ag.</h4>
                                     <p class="text-xs text-gray-300 mt-1">Pembimbing Utama Gurfatulidad</p>
@@ -603,12 +606,14 @@
             <!-- Left Info Area -->
             <div class="md:col-span-5 space-y-6">
                 <div class="flex items-center space-x-3">
-                    <img 
-                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFtWd-eJh9EJNefCJnMaO0DAkL4v13Law40KwrYowOkg-XOh9Jge5gGstpuKcXUoPx" 
-                        alt="Logo Gurfatulidad" 
-                        class="w-12 h-12 rounded-full border border-gold/40"
-                        onerror="this.src='https://placehold.co/100?text=GI'"
-                    />
+                    <div id="footer-logo-container" class="w-12 h-12 rounded-full border border-gold/40 overflow-hidden flex items-center justify-center bg-islamic">
+                        <img 
+                            id="footer-logo"
+                            src="logo.png" 
+                            alt="Logo Gurfatulidad" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
                     <div>
                         <h4 class="text-xl font-bold text-white tracking-wide">GURFATULIDAD</h4>
                         <p class="text-xs text-gold">Qur'an | Ibadah | Bahasa Arab</p>
@@ -635,7 +640,7 @@
                 </ul>
             </div>
 
-            <!-- Right: Dynamic Google Maps (Placeholder / Static preview) or Quick Information Card -->
+            <!-- Right Area -->
             <div class="md:col-span-4 space-y-4">
                 <h5 class="text-white font-bold text-base border-l-2 border-gold pl-3">Lokasi Kegiatan</h5>
                 <div class="rounded-2xl bg-white/5 border border-white/10 p-4 space-y-3">
@@ -665,8 +670,98 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE JAVASCRIPT FOR MOBILES -->
+    <!-- INTERACTIVE JAVASCRIPT FOR MOBILES & IMAGE ERROR RESILIENCE -->
     <script>
+        // CONFIGURASI GAMBAR CADANGAN
+        const URL_LOGO_BLOGGER = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFtWd-eJh9EJNefCJnMaO0DAkL4v13Law40KwrYowOkg-XOh9Jge5gGstpuKcXUoPx";
+        const URL_USTADZ_BLOGGER = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg75ObNxK8ODlh57BkwtVo2JAn7-p1IbvId2hmHkfEz5MC2-gd2Bo7ARwn0p3sq3Iyd";
+
+        // 1. Fungsi Mengatasi Masalah Gambar Logo (Error Handlers)
+        function initImageLoadingSystem() {
+            const mainLogoImg = document.getElementById('main-logo');
+            const cardLogoImg = document.getElementById('card-logo');
+            const footerLogoImg = document.getElementById('footer-logo');
+
+            const miniAvatarImg = document.getElementById('mini-avatar');
+            const largePhotoImg = document.getElementById('large-photo');
+
+            // --- LOGO HANDLING LOGIC ---
+            function setupLogoFallback(imgElement, containerId) {
+                let attempt = 1; // 1 = Local, 2 = Blogger, 3 = SVG
+                
+                imgElement.onerror = function() {
+                    if (attempt === 1) {
+                        // Gagal memuat file lokal 'logo.png', coba link Blogger
+                        attempt = 2;
+                        imgElement.src = URL_LOGO_BLOGGER;
+                    } else if (attempt === 2) {
+                        // Gagal juga memuat link Blogger, ubah jadi SVG Islami yang elegan
+                        attempt = 3;
+                        const container = document.getElementById(containerId);
+                        if (container) {
+                            container.innerHTML = `
+                                <div class="w-full h-full bg-gradient-to-br from-islamic-dark to-islamic flex items-center justify-center text-gold font-bold text-xl border border-gold/30 text-glow">
+                                    G
+                                </div>
+                            `;
+                        }
+                    }
+                };
+            }
+
+            // --- USTADZ PHOTO HANDLING LOGIC ---
+            function setupUstadzFallback(imgElement, isLarge, containerId) {
+                let attempt = 1; // 1 = Local, 2 = Blogger, 3 = SVG/Avatar
+                
+                imgElement.onerror = function() {
+                    if (attempt === 1) {
+                        // Gagal memuat file lokal 'ustadz.png', coba link Blogger
+                        attempt = 2;
+                        imgElement.src = URL_USTADZ_BLOGGER;
+                    } else if (attempt === 2) {
+                        // Gagal memuat link Blogger juga, gunakan SVG/CSS Placeholder yang indah
+                        attempt = 3;
+                        const container = document.getElementById(containerId);
+                        if (container) {
+                            if (isLarge) {
+                                container.innerHTML = `
+                                    <div class="w-full h-full bg-gradient-to-br from-islamic-dark via-islamic to-islamic-light flex flex-col items-center justify-center text-center p-8 text-white">
+                                        <div class="w-24 h-24 rounded-full bg-gold/15 border-2 border-gold flex items-center justify-center text-gold text-5xl mb-4 shadow-lg">
+                                            <i class="fa-solid fa-user-tie"></i>
+                                        </div>
+                                        <h4 class="font-bold text-xl text-gold">Ust. Fajar Amirul Mu’ti, S.Ag.</h4>
+                                        <p class="text-xs text-gray-300 mt-2 max-w-[280px]">Alumni Pondok Pesantren Al Amien Prenduan</p>
+                                        <div class="mt-6 px-4 py-1.5 bg-gold/20 text-gold text-[11px] rounded-full uppercase tracking-wider font-semibold border border-gold/30">
+                                            Pembimbing Utama
+                                        </div>
+                                    </div>
+                                `;
+                            } else {
+                                container.innerHTML = `
+                                    <div class="w-full h-full bg-gradient-to-br from-islamic to-islamic-light flex items-center justify-center text-white">
+                                        <i class="fa-solid fa-user text-sm text-gold"></i>
+                                    </div>
+                                `;
+                            }
+                        }
+                    }
+                };
+            }
+
+            // Jalankan sistem proteksi gambar
+            setupLogoFallback(mainLogoImg, 'logo-container');
+            setupLogoFallback(cardLogoImg, 'card-logo-container');
+            setupLogoFallback(footerLogoImg, 'footer-logo-container');
+
+            setupUstadzFallback(miniAvatarImg, false, 'mini-avatar-container');
+            setupUstadzFallback(largePhotoImg, true, 'large-photo-container');
+        }
+
+        // Jalankan saat DOM siap
+        document.addEventListener('DOMContentLoaded', () => {
+            initImageLoadingSystem();
+        });
+
         // Toggle mobile navigation drawer
         const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
